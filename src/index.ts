@@ -11,8 +11,8 @@ const DB_URI = process.env.DB_URI || "";
 
 const app = new Koa();
 
-app.use(router.routes());
 app.use(bodyParser());
+app.use(router.routes());
 app.use(async (ctx) => {
     ctx.body = `
         <section style='height:calc(100vh - 16px);display:flex;align-items:center;justify-content:center;'>

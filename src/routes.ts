@@ -1,15 +1,14 @@
 import Router from "koa-router";
 
 import logger from "./common/logger/logger";
+import { createUserHandler } from "./controller/user.controller";
 
 const router = new Router({
     prefix: '/api/v1'
 });
 
 router.post('/user', ctx => {
-    let user = ctx.request.body;
-    logger.info('User created', user);
-    ctx.response.status = 201;
+    createUserHandler(ctx.request, ctx.response);
 });
 
 export default router;
