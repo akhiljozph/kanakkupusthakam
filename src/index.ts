@@ -1,6 +1,5 @@
 import 'dotenv/config';
 import Koa from "koa";
-import mongoose from "mongoose";
 import bodyParser from "koa-bodyparser";
 
 import logger from "./common/logger/logger";
@@ -20,17 +19,6 @@ app.use(async (ctx) => {
         </section>
     `;
 });
-
-const connectDB = async () => {
-    try {
-        await mongoose.connect(DB_URI);
-        logger.info(`Successfully Connected to MongoDB`);
-    } catch (error) {
-        logger.error(error);
-    }
-}
-
-connectDB();
 
 app.listen(PORT, () => {
     logger.info(`Ex-tracker is running on port ${PORT}`)

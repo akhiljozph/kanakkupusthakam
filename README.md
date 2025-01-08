@@ -78,3 +78,32 @@
     <li>510 - Not Extended</li>
     <li>511 - Network Authentication Required</li>
 </ul>
+
+### Project Structure
+
+<ul>
+    <li>
+        Config - Contains configuration files.
+    </li>
+    <li>
+        Controllers - 
+    </li>
+    <li>
+        Middleware - 
+    </li>
+    <li>
+        Migrations - Contains migration scripts.
+    </li>
+    <li>
+        Models - Contains DB models.
+    </li>
+    <li>
+        Routes - Contains API routes.
+    </li>
+    <li>
+        Seeders - 
+    </li>
+    <li>
+        Services - 
+    </li>
+</ul>
