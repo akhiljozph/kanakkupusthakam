@@ -107,3 +107,7 @@
         Services - 
     </li>
 </ul>
+
+<!-- https://dev.to/nedsoft/getting-started-with-sequelize-and-postgres-emp -->
+<!-- https://medium.com/@ahsankhaleeq10/how-to-use-postgresql-with-sequelize-in-node-js-1bed818c9f02 -->
+<!-- https://medium.com/@rachealkuranchie/node-js-authentication-with-postgresql-sequelize-and-express-js-20ae773da4c9 -->
