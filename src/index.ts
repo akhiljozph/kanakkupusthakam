@@ -2,6 +2,7 @@ import koa from "koa";
 import parser from "koa-bodyparser";
 import cors from "@koa/cors";
 import { Client } from "pg";
+import * as dotenv from 'dotenv';
 
 const app = new koa();
 
@@ -9,6 +10,14 @@ app.use(cors());
 app.use(parser());
 
 const PORT = process.env.PORT || 3000;
+
+if (process.env.NODE_ENV === "local") {
+    dotenv.config({ path: './config/\.env.local'});
+} else {
+    dotenv.config({ path: './config/\.env.development'});
+}
+
+console.log("PORT", process.env.PORT);
 
 const client = new Client({
     user: 'idgital',
