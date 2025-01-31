@@ -1,17 +1,11 @@
 import koa from "koa";
-import parser from "koa-bodyparser";
 import cors from "@koa/cors";
-import * as dotenv from 'dotenv';
+import parser from "koa-bodyparser";
 
-import loadEnvConfig from "./config/env.config";
-
-console.log(loadEnvConfig());
-
-dotenv.config({ path: loadEnvConfig()  });
-
+import "./config/env.config";
 import dbClient from "./config/db.config";
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT;
 
 const app = new koa();
 
