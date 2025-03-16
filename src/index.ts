@@ -1,10 +1,10 @@
-import koa from "koa";
 import cors from "@koa/cors";
+import koa from "koa";
 import parser from "koa-bodyparser";
 
 import "./config/env.config";
-import router from "./routes";
 import connectToDatabase from "./config/sequelize.db.config";
+import router from "./routes";
 
 const PORT = process.env.PORT;
 
@@ -31,4 +31,8 @@ app.use(router.routes()).use(router.allowedMethods());
  * 
  */
 
-connectToDatabase();
+connectToDatabase().then(() => {
+    app.listen(PORT, () => {
+        console.log(`Ex-tracker is running on port ${PORT}`);
+    });
+}).catch((err) => console.error('Oops! The server failed to start!', err.stack));
