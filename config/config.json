@@ -1,10 +1,16 @@
 {
-  "development": {
+  "local": {
     "username": "postgres",
     "password": "admin",
     "database": "ex-tracker",
     "host": "localhost",
     "dialect": "postgres"
   },
-  "dialect": "postgres"
+  "development": {
+    "username": "postgres",
+    "password": "admin",
+    "database": "ex-tracker",
+    "host": "localhost",
+    "dialect": "postgres"
+  }
 }
