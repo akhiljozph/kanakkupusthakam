@@ -1,114 +1,98 @@
-# Ex.Tracker
+<p align="center">
+  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
+</p>
 
-## Status Codes
+[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
+[circleci-url]: https://circleci.com/gh/nestjs/nest
 
-<ul>
-    <li>100 - Continue</li>
-    <li>101 - Switching Protocols</li>
-    <li>102 - Processing</li>
-    <li>200 - OK</li>
-    <li>201 - Created</li>
-    <li>202 - Accepted</li>
-    <li>203 - Non-Authoritative Information</li>
-    <li>204 - No Content</li>
-    <li>205 - Reset Content</li>
-    <li>206 - Partial Content</li>
-    <li>207 - Multi-Status</li>
-    <li>208 - Already Reported</li>
-    <li>226 - Im Used</li>
-    <li>300 - Multiple Choices</li>
-    <li>301 - Moved Permanently</li>
-    <li>302 - Found</li>
-    <li>303 - See Other</li>
-    <li>304 - Not Modified</li>
-    <li>305 - Use Proxy</li>
-    <li>307 - Temporary Redirect</li>
-    <li>308 - Permanent Redirect</li>
-    <li>400 - Bad Request</li>
-    <li>401 - Unauthorized</li>
-    <li>402 - Payment Required</li>
-    <li>403 - Forbidden</li>
-    <li>404 - Not Found</li>
-    <li>405 - Method Not Allowed</li>
-    <li>406 - Not Acceptable</li>
-    <li>407 - Proxy Authentication Required</li>
-    <li>408 - Request Timeout</li>
-    <li>409 - Conflict</li>
-    <li>410 - Gone</li>
-    <li>303 - See Other</li>
-    <li>304 - Not Modified</li>
-    <li>305 - Use Proxy</li>
-    <li>307 - Temporary Redirect</li>
-    <li>308 - Permanent Redirect</li>
-    <li>400 - Bad Request</li>
-    <li>401 - Unauthorized</li>
-    <li>402 - Payment Required</li>
-    <li>403 - Forbidden</li>
-    <li>404 - Not Found</li>
-    <li>405 - Method Not Allowed</li>
-    <li>406 - Not Acceptable</li>
-    <li>407 - Proxy Authentication Required</li>
-    <li>408 - Request Timeout</li>
-    <li>409 - Conflict</li>
-    <li>410 - Gone</li>
-    <li>411 - Length Required</li>
-    <li>412 - Precondition Failed</li>
-    <li>413 - Payload Too Large</li>
-    <li>414 - URI Too Long</li>
-    <li>415 - Unsupported Media Type</li>
-    <li>416 - Range Not Satisfiable</li>
-    <li>417 - Expectation Failed</li>
-    <li>418 - I'm A Teapot</li>
-    <li>422 - Unprocessable Entity</li>
-    <li>423 - Locked</li>
-    <li>424 - Failed Dependency</li>
-    <li>426 - Upgrade Required</li>
-    <li>428 - Precondition Required</li>
-    <li>429 - Too Many Requests</li>
-    <li>431 - Request Header Fields Too Large</li>
-    <li>500 - Internal Server Error</li>
-    <li>501 - Not Implemented</li>
-    <li>502 - Bad Gateway</li>
-    <li>503 - Service Unavailable</li>
-    <li>504 - Gateway Timeout</li>
-    <li>505 - HTTP Version Not Supported</li>
-    <li>506 - Variant Also Negotiates</li>
-    <li>507 - Insufficient Storage</li>
-    <li>508 - Loop Detected</li>
-    <li>510 - Not Extended</li>
-    <li>511 - Network Authentication Required</li>
-</ul>
+  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
+    <p align="center">
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
+<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
+<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
+<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
+<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
+  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
+    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
+  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
+</p>
+  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
+  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-### Project Structure
+## Description
 
-<ul>
-    <li>
-        Config - Contains configuration files.
-    </li>
-    <li>
-        Controllers - 
-    </li>
-    <li>
-        Middleware - 
-    </li>
-    <li>
-        Migrations - Contains migration scripts.
-    </li>
-    <li>
-        Models - Contains DB models.
-    </li>
-    <li>
-        Routes - Contains API routes.
-    </li>
-    <li>
-        Seeders - 
-    </li>
-    <li>
-        Services - 
-    </li>
-</ul>
+[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-<!-- https://dev.to/nedsoft/getting-started-with-sequelize-and-postgres-emp -->
-<!-- https://medium.com/@ahsankhaleeq10/how-to-use-postgresql-with-sequelize-in-node-js-1bed818c9f02 -->
-<!-- https://medium.com/@rachealkuranchie/node-js-authentication-with-postgresql-sequelize-and-express-js-20ae773da4c9 -->
-<!-- https://dev.to/kachiic/koa-js-part-2-connect-a-sql-database-to-your-server-4mhl -->
+## Project setup
+
+```bash
+$ npm install
+```
+
+## Compile and run the project
+
+```bash
+# development
+$ npm run start
+
+# watch mode
+$ npm run start:dev
+
+# production mode
+$ npm run start:prod
+```
+
+## Run tests
+
+```bash
+# unit tests
+$ npm run test
+
+# e2e tests
+$ npm run test:e2e
+
+# test coverage
+$ npm run test:cov
+```
+
+## Deployment
+
+When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+
+If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+
+```bash
+$ npm install -g @nestjs/mau
+$ mau deploy
+```
+
+With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+
+## Resources
+
+Check out a few resources that may come in handy when working with NestJS:
+
+- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
+- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
+- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
+- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
+- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
+- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
+- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
+- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+
+## Support
+
+Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+
+## Stay in touch
+
+- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
+- Website - [https://nestjs.com](https://nestjs.com/)
+- Twitter - [@nestframework](https://twitter.com/nestframework)
+
+## License
+
+Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
