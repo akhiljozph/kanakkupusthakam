@@ -18,5 +18,7 @@
         "titleBar.inactiveBackground": "#ff1ac599",
         "titleBar.inactiveForeground": "#e7e7e799"
     },
-    "workbench.colorTheme": "Kimbie Dark",
+    "workbench.colorTheme": "Winter is Coming (Light)",
+    "editor.fontFamily": "JetBrains Mono Light",
+    "editor.fontSize": 14
 }
