@@ -4,7 +4,7 @@
 
 ## Tech Stack
 
-Frontend - React.js
+Frontend - React.js, TailwindCSS
 Backend - Koa.js
 ORM - TypeORM
 Database - MariaDB
