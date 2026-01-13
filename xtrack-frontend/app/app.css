@@ -1,7 +1,11 @@
 @import "tailwindcss";
 
 @theme {
-  --font-play: "Play"
+  --font-play: "Play", sans-serif;
+
+  /* Colors */
+  --primary-bg-color: #fcb100;
+  --primary-fg-color: #111111;
 }
 
 html,
