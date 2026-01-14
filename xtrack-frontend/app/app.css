@@ -11,4 +11,5 @@
 html,
 body {
   font-family: var(--font-play);
+  height: 100vh;
 }

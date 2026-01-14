@@ -1,5 +1,5 @@
-export function SignIn() {
+export default function SignIn() {
     return (
-        <>Sign in</>
+        <p>Sign in</p>
     )
 }
