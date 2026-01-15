@@ -7,7 +7,7 @@ export function Welcome() {
   const navigate = useNavigate();
 
   return (
-    <section className="landing flex justify-center items-center flex-col gap-8 bg-gradient-to-br from-yellow-50 to-orange-50">
+    <section className="landing h-screen flex justify-center items-center flex-col gap-8 bg-gradient-to-br from-yellow-50 to-orange-50">
       <header className="flex flex-col gap-3 text-center">
         <h1 className="text-6xl font-bold flex justify-center items-center text-gray-900 tracking-tight">
           eXtrack

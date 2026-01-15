@@ -1,4 +1,17 @@
+"use client";
+
+import { useForm } from "react-hook-form";
+
+import type { ExtrackSignUpForm } from "./sign-up.types";
+
 export default function SignUp() {
+
+    const { register, handleSubmit, formState: { errors } } = useForm<ExtrackSignUpForm>();
+
+    const onSubmit = (data: ExtrackSignUpForm) => {
+        console.log("Form data:", data);
+    };
+
     return (
         <section className="h-screen flex justify-center items-center bg-gradient-to-br from-yellow-50 to-orange-50 p-4">
             <div className="bg-white rounded-lg shadow-lg p-8 w-full max-w-2xl max-h-[90vh] overflow-y-auto">
@@ -9,8 +22,7 @@ export default function SignUp() {
                     <p className="text-center text-gray-600 mt-2">Create your eXtrack account</p>
                 </header>
 
-                <form className="flex flex-col gap-6">
-                    {/* Personal Information */}
+                <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="flex flex-col gap-2">
                             <label htmlFor="firstName" className="text-sm font-medium text-gray-700">
@@ -19,7 +31,7 @@ export default function SignUp() {
                             <input
                                 type="text"
                                 id="firstName"
-                                name="firstName"
+                                {...register("firstName", { required: "First name is required" })}
                                 className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
                                 placeholder="John"
                                 required
@@ -33,7 +45,7 @@ export default function SignUp() {
                             <input
                                 type="text"
                                 id="lastName"
-                                name="lastName"
+                                {...register("lastName", { required: "Last name is required" })}
                                 className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
                                 placeholder="Doe"
                                 required
@@ -41,7 +53,6 @@ export default function SignUp() {
                         </div>
                     </div>
 
-                    {/* Contact Information */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="flex flex-col gap-2">
                             <label htmlFor="email" className="text-sm font-medium text-gray-700">
@@ -50,9 +61,15 @@ export default function SignUp() {
                             <input
                                 type="email"
                                 id="email"
-                                name="email"
+                                {...register("email", {
+                                    required: "Email is required",
+                                    pattern: {
+                                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                                        message: "Invalid email address"
+                                    }
+                                })}
                                 className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
-                                placeholder="john@example.com"
+                                placeholder="john.doe@extrack.com"
                                 required
                             />
                         </div>
@@ -64,7 +81,7 @@ export default function SignUp() {
                             <input
                                 type="tel"
                                 id="mobile"
-                                name="mobile"
+                                {...register("mobile", { required: "Mobile number is required" })}
                                 className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
                                 placeholder="+1 234 567 8900"
                                 required
@@ -80,14 +97,13 @@ export default function SignUp() {
                         <input
                             type="password"
                             id="password"
-                            name="password"
+                            {...register("password", { required: "Password is required" })}
                             className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
                             placeholder="Enter your password"
                             required
                         />
                     </div>
 
-                    {/* Address Section */}
                     <div className="border-t pt-6">
                         <h2 className="text-lg font-semibold text-gray-900 mb-4">Address Details</h2>
 
@@ -100,7 +116,7 @@ export default function SignUp() {
                                     <input
                                         type="text"
                                         id="country"
-                                        name="country"
+                                        {...register("country")}
                                         className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
                                         placeholder="India"
                                     />
@@ -113,7 +129,7 @@ export default function SignUp() {
                                     <input
                                         type="text"
                                         id="state"
-                                        name="state"
+                                        {...register("state")}
                                         className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
                                         placeholder="Kerala"
                                     />
@@ -126,9 +142,9 @@ export default function SignUp() {
                                     <input
                                         type="text"
                                         id="city"
-                                        name="city"
+                                        {...register("city")}
                                         className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
-                                        placeholder="Thiruvananthapuram"
+                                        placeholder="Idukki"
                                     />
                                 </div>
                             </div>
@@ -141,7 +157,7 @@ export default function SignUp() {
                                     <input
                                         type="text"
                                         id="apartment"
-                                        name="apartment"
+                                        {...register("apartment")}
                                         className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
                                         placeholder="Apt 123"
                                     />
@@ -154,9 +170,9 @@ export default function SignUp() {
                                     <input
                                         type="text"
                                         id="landmark"
-                                        name="landmark"
+                                        {...register("landmark")}
                                         className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
-                                        placeholder="Near Park"
+                                        placeholder="Idukki Dam"
                                     />
                                 </div>
                             </div>
@@ -168,18 +184,17 @@ export default function SignUp() {
                                 <input
                                     type="text"
                                     id="pincode"
-                                    name="pincode"
+                                    {...register("pincode")}
                                     className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
-                                    placeholder="695001"
+                                    placeholder="685505"
                                 />
                             </div>
                         </div>
                     </div>
 
-                    {/* Submit Button */}
                     <button
                         type="submit"
-                        className="mt-4 font-bold py-3 px-8 rounded-lg bg-yellow-400 hover:bg-yellow-500 text-gray-900 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+                        className="cursor-pointer mt-4 font-bold py-3 px-8 rounded-lg bg-yellow-400 hover:bg-yellow-500 text-gray-900 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
                     >
                         Create Account
                     </button>
