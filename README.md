@@ -1,6 +1,6 @@
-# Kanakk | kanakkupusthakam 
+# Kanakk | Kanakkupusthakam 
 
-**The smart manger for you daily expenses**
+**The smart manager for your daily expenses.**
 
 ## Tech Stack
 
