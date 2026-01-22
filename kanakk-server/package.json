@@ -1,0 +1,13 @@
+{
+  "name": "kanakk-server",
+  "version": "0.0.0",
+  "keywords": [
+    "tsc"
+  ],
+  "license": "ISC",
+  "type": "commonjs",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
