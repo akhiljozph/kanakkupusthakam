@@ -1,6 +1,7 @@
 import './App.css'
 import Button from './components/ui/button/Button'
 import DropDown from './components/ui/drop-down/DropDown'
+import MultiSelect from './components/ui/multi-select/MultiSelect'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
       Kanakk | Kanakkupusthakam
       <Button onClick={(() => { onClick() })}>Sample</Button>
       <DropDown options={dropDownOptions} />
+      <MultiSelect options={dropDownOptions} />
     </div>
   )
 }

@@ -7,9 +7,9 @@ const DropDown = (props: DropDownProps) => {
     return (
         <select>
             <option value="">Please select one value</option>
-            {options.map((option, index) => (
-                <option value={option.value} key={index}>
-                    {option.name}
+            {options.map((elem, index) => (
+                <option value={elem.value} key={index}>
+                    {elem.name}
                 </option>
             ))}
         </select>
