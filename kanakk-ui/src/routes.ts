@@ -8,8 +8,8 @@ export const routes: IRoutesConfig[] = [
         path: '/auth',
         element: Auth,
         children: [
-            { path: '/sign-in', element: SignIn },
-            { path: '/sign-up', element: SignUp }
+            { path: 'sign-in', element: SignIn },
+            { path: 'sign-up', element: SignUp }
         ]
     }
 ]
