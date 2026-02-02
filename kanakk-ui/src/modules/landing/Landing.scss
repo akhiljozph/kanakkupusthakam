@@ -1,0 +1,25 @@
+.landing-container {
+    font-family: "Play", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 5rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .action-section {
+        display: flex;
+        gap: 1rem;
+        padding: 1rem;
+
+        .btn-sign-in,
+        .btn-sign-up {
+            padding: 0.5rem 1rem;
+            font-family: inherit;
+            font-weight: 700;
+            cursor: pointer;
+        }
+    }
+}

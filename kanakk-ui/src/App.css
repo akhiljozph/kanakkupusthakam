@@ -1,6 +1,8 @@
-.kanakk-lander {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: inherit;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  height: 100vh;
 }
