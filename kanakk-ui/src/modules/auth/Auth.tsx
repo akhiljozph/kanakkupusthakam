@@ -1,11 +1,15 @@
 import { Outlet } from "react-router-dom";
 
-const Auth = () => {
+import type { AuthProps } from "./Auth.types";
+
+import "./Auth.scss";
+
+const Auth = (props: AuthProps) => {
     return (
-        <div>
-            Test
+        <main className="auth-container">
+            <h1>KANAKK</h1>
             <Outlet />
-        </div>
+        </main>
     )
 }
 export default Auth;
