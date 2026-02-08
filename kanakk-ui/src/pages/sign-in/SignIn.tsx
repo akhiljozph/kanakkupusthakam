@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Input from "../../components/ui/input/Input";
 import Button from "../../components/ui/button/Button";
+import axiosInstance from "../../api/axios-instance";
 
 const SignIn = () => {
 
@@ -10,6 +11,8 @@ const SignIn = () => {
         password: ''
     });
 
+    useEffect(() => { }, []);
+
     const handleChange = (fieldName: string, value: string) => {
         setFormData((prev) => ({ ...prev, [fieldName]: value }));
     }
@@ -17,6 +20,8 @@ const SignIn = () => {
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         console.log(formData);
+
+        axiosInstance.get('/sign-in', {});
     }
 
     return (
