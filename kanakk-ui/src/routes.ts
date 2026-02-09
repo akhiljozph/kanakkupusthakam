@@ -1,4 +1,5 @@
 import Auth from "./modules/auth/Auth";
+import Dashboard from "./modules/dashboard/Dashboard";
 import Landing from "./modules/landing/Landing";
 import SignIn from "./pages/sign-in/SignIn";
 import SignUp from "./pages/sign-up/SignUp";
@@ -16,5 +17,8 @@ export const routes: IRoutesConfig[] = [
             { path: 'sign-in', element: SignIn },
             { path: 'sign-up', element: SignUp }
         ]
+    }, {
+        path: '/dashboard',
+        element: Dashboard
     }
 ]
