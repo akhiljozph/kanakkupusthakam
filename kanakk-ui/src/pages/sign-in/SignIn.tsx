@@ -17,11 +17,30 @@ const SignIn = () => {
         setFormData((prev) => ({ ...prev, [fieldName]: value }));
     }
 
+    const handleAuthenticationSuccessful = (response: any) => {
+        console.info(response);
+    }
+
+    const handleAuthenticationFailure = (response: any) => {
+        console.info(response);
+    }
+
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         console.log(formData);
 
-        axiosInstance.get('/sign-in', {});
+        try {
+            const response: any = axiosInstance.get('/sign-in', {});
+
+            if (response?.status === 200) {
+                handleAuthenticationSuccessful(response);
+            } else {
+                handleAuthenticationFailure(response);
+            }
+
+        } catch (error) {
+            console.error('Error occurred on your signin attempt!', error);
+        }
     }
 
     return (
