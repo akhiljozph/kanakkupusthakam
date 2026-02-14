@@ -3,8 +3,11 @@ import { useEffect, useState } from "react";
 import Input from "../../components/ui/input/Input";
 import Button from "../../components/ui/button/Button";
 import axiosInstance from "../../api/axios-instance";
+import { useNavigate } from "react-router-dom";
 
 const SignIn = () => {
+
+    const navigate = useNavigate();
 
     const [formData, setFormData] = useState({
         username: '',
@@ -41,6 +44,8 @@ const SignIn = () => {
         } catch (error) {
             console.error('Error occurred on your signin attempt!', error);
         }
+
+        navigate('/shell/dashboard');
     }
 
     return (
