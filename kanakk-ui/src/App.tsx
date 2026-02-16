@@ -1,6 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
 import { routes } from './routes';
+import { kanakkStore } from './store/kanakk.store';
 import type { IRoutesConfig } from './routes.types';
 
 import './App.css';
@@ -24,11 +26,13 @@ function renderRoutes(routesConfig: IRoutesConfig[]) {
 function App() {
 
   return (
-    <BrowserRouter>
-      <Routes>
-        {renderRoutes(routes)}
-      </Routes>
-    </BrowserRouter>
+    <Provider store={kanakkStore}>
+      <BrowserRouter>
+        <Routes>
+          {renderRoutes(routes)}
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   )
 }
 
