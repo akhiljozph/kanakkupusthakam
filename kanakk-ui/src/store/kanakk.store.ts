@@ -9,3 +9,6 @@ export const kanakkStore = configureStore({
         dashboard: dashboardReducer
     },
 });
+
+// export type RootState = ReturnType<typeof kanakkStore.getState>;
+// export type AppDispatch = typeof kanakkStore.dispatch;

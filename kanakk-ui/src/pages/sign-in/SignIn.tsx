@@ -4,9 +4,12 @@ import Input from "../../components/ui/input/Input";
 import Button from "../../components/ui/button/Button";
 import axiosInstance from "../../api/axios-instance";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { saveUserInfo } from "../../modules/auth/AuthSlice";
 
 const SignIn = () => {
 
+    const dispatch = useDispatch();
     const navigate = useNavigate();
 
     const [formData, setFormData] = useState({
@@ -22,6 +25,8 @@ const SignIn = () => {
 
     const handleAuthenticationSuccessful = (response: any) => {
         console.info(response);
+
+        dispatch(saveUserInfo());
     }
 
     const handleAuthenticationFailure = (response: any) => {
