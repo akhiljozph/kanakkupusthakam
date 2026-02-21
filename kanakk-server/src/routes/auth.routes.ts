@@ -1,11 +1,12 @@
 import Router from '@koa/router';
 
+import { signupController } from '../controllers/auth.controller';
 import signUpSchema from '../schemas/input-schemas/sign-up.schema';
 
 const router = new Router();
 
 
-router.post('/sign-in', (ctx) => {
+router.post('/signin', (ctx) => {
 
     ctx.body = { status: 200, body: {} }
 });
@@ -18,6 +19,8 @@ router.post('/signup', (ctx) => {
         ctx.body = { status: 400, errors: parsedBody.error.flatten().fieldErrors };
         return;
     }
+
+    signupController(parsedBody.data, () => { });
 
     ctx.body = { status: 200, body: {} }
 });
