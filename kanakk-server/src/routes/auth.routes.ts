@@ -11,18 +11,31 @@ router.post('/signin', (ctx) => {
     ctx.body = { status: 200, body: {} }
 });
 
-router.post('/signup', (ctx) => {
-    const parsedBody = signUpSchema.safeParse(ctx.request.body);
+router.post('/signup', async (ctx) => {
+    try {
 
-    if (!parsedBody.success) {
-        ctx.status = 400;
-        ctx.body = { status: 400, errors: parsedBody.error.flatten().fieldErrors };
-        return;
+        const parsedBody = signUpSchema.safeParse(ctx.request.body);
+
+        if (!parsedBody.success) {
+            ctx.status = 400;
+            ctx.body = { status: 400, errors: parsedBody.error.flatten().fieldErrors };
+            return;
+        }
+
+        const result = await signupController(parsedBody.data);
+
+        if (!result.success) {
+            ctx.status = 400;
+            ctx.body = { status: 400, message: result.message };
+            return;
+        }
+
+        ctx.body = { status: 200, body: {} }
+    } catch (error) {
+        console.error(error);
+    } finally {
+        console.info('POST /signup — Execution completed successfully.');
     }
-
-    signupController(parsedBody.data, () => { });
-
-    ctx.body = { status: 200, body: {} }
 });
 
 export default router;
