@@ -34,7 +34,8 @@ router.post('/signup', async (ctx) => {
     } catch (error) {
         console.error(error);
     } finally {
-        console.info('POST /signup — Execution completed successfully.');
+        console.info('POST /signup — Execution completed successfully!');
+        console.info('POST /signup — Execution completed successfully!');
     }
 });
 

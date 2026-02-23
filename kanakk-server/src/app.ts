@@ -6,6 +6,7 @@ import routes from './routes';
 const app = new Koa();
 
 app.use(bodyParser());
+
 app.use(routes.routes());
 
 export default app;
