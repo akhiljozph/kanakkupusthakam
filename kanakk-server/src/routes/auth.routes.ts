@@ -1,7 +1,8 @@
 import Router from '@koa/router';
 
-import { signupController } from '../controllers/auth.controller';
+
 import signUpSchema from '../schemas/input-schemas/sign-up.schema';
+import { authController } from '../controllers/auth.controller';
 
 const router = new Router();
 
@@ -22,7 +23,7 @@ router.post('/signup', async (ctx) => {
             return;
         }
 
-        const result = await signupController(parsedBody.data);
+        const result = await authController.signupController(parsedBody.data);
 
         if (!result.success) {
             ctx.status = 400;
@@ -34,7 +35,6 @@ router.post('/signup', async (ctx) => {
     } catch (error) {
         console.error(error);
     } finally {
-        console.info('POST /signup — Execution completed successfully!');
         console.info('POST /signup — Execution completed successfully!');
     }
 });
