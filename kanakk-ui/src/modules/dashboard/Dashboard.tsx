@@ -10,9 +10,7 @@ const Dashboard = (props: DashboardProps) => {
 
     const user = useSelector((state) => state.auth);
     return (
-        <Wrapper>
-
-        </Wrapper>
+        <p>Dashboard works!</p>
     )
 }
 export default Dashboard;
