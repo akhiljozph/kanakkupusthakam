@@ -1,7 +1,5 @@
 import { useSelector } from "react-redux";
 
-import Wrapper from "../../pages/wrapper/Wrapper";
-
 import type { DashboardProps } from "./Dashboard.types";
 
 import './Dashboard.scss';
