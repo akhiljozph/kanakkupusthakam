@@ -11,7 +11,8 @@ const Input = (props: InputProps) => {
     return (
         <div className="kank-input-wrapper">
             <label className="kank-label">{props?.label}</label>
-            <input className="kank-input" type={props?.type} placeholder={props?.placeholder} onChange={handleChange} />
+            <input className="kank-input" type={props?.type} placeholder={props?.placeholder}
+                onChange={handleChange} minLength={props?.minLength} maxLength={props?.maxLength} />
         </div>
     )
 }
